@@ -2,7 +2,7 @@ import { Component } from "react";
 import axios from "axios";
 
 const MyMovies = axios.create({
-  baseURL: 'https://api.themoviedb.org/3/movie/550?api_key=2ca68b2ad8acad4e5b9444b713f55c11'
+  baseURL: 'https://api.themoviedb.org/3/movie/popular?api_key=2ca68b2ad8acad4e5b9444b713f55c11&language=en-US&page=1'
 })
 
 export default class Movies extends Component{
@@ -18,8 +18,8 @@ export default class Movies extends Component{
       return{
         ...item
       }
+      console.log(response)
     })
-
     this.setState({movies: AllMovies})
   }
 

@@ -22,7 +22,7 @@ export default class App extends Component{
           <Route path='/' element={<Home/>}/>
           <Route path='/movies' element={<Movies/>}/>
           <Route path='/shows' element={<Shows/>}/>
-          <Route path='/*' element={<ErrorPage/>}/>
+          <Route path='*' element={<ErrorPage/>}/>
         </Routes>
 
 
